@@ -40,7 +40,7 @@ const ProductDetails: React.FC = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="responsive-container py-12">
       <nav className="flex mb-8 text-xs font-medium uppercase tracking-widest text-gray-500">
         <Link to="/" className="hover:text-amber-600">Home</Link>
         <span className="mx-2">/</span>

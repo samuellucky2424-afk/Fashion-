@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="responsive-container py-24">
       <div className="text-center mb-16">
         <h1 className="text-5xl font-serif font-bold mb-4">Get In Touch</h1>
         <p className="text-gray-500 max-w-2xl mx-auto">We'd love to hear from you. Whether you have a question about our collection or need styling advice, our team is here to help.</p>

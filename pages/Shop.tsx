@@ -34,7 +34,7 @@ const Shop: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-12">
+    <div className="responsive-container py-6 md:py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-8 border-b pb-4 md:pb-8">
         <div>
           <h1 className="text-2xl md:text-4xl font-serif font-bold mb-1">Our Collection</h1>
@@ -52,14 +52,14 @@ const Shop: React.FC = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="w-full appearance-none bg-white border border-gray-200 px-3 py-2 pr-8 text-xs font-medium focus:outline-none focus:ring-1 focus:ring-amber-500 cursor-pointer rounded"
+              className="w-full appearance-none bg-white border border-gray-200 px-4 py-3 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-amber-500 cursor-pointer rounded"
             >
               <option value="newest">Newest First</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
               <option value="rating">Top Rated</option>
             </select>
-            <ChevronDown size={14} className="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500" />
+            <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500" />
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ const Shop: React.FC = () => {
         <aside className={`lg:w-64 space-y-8 ${showFilters ? 'fixed inset-0 z-[60] bg-white p-6 overflow-y-auto' : 'hidden lg:block'}`}>
           <div className="flex justify-between items-center lg:hidden mb-6">
             <h3 className="font-bold uppercase tracking-widest text-sm">Filter By</h3>
-            <button onClick={() => setShowFilters(false)} className="p-2 -mr-2"><X size={20} /></button>
+            <button onClick={() => setShowFilters(false)} className="p-3 -mr-2"><X size={24} /></button>
           </div>
 
           <div>
@@ -77,7 +77,7 @@ const Shop: React.FC = () => {
             <div className="space-y-3">
               <button
                 onClick={() => { handleCategoryChange(null); setShowFilters(false); }}
-                className={`block text-xs transition-colors py-1 ${!currentCategory ? 'text-amber-600 font-bold' : 'text-gray-600 hover:text-amber-600'}`}
+                className={`block w-full text-left text-sm transition-colors py-3 px-1 ${!currentCategory ? 'text-amber-600 font-bold' : 'text-gray-600 hover:text-amber-600'}`}
               >
                 All Collections
               </button>
@@ -85,31 +85,19 @@ const Shop: React.FC = () => {
                 <button
                   key={cat}
                   onClick={() => { handleCategoryChange(cat); setShowFilters(false); }}
-                  className={`block text-xs transition-colors py-1 ${currentCategory === cat ? 'text-amber-600 font-bold' : 'text-gray-600 hover:text-amber-600'}`}
+                  className={`block w-full text-left text-sm transition-colors py-3 px-1 ${currentCategory === cat ? 'text-amber-600 font-bold' : 'text-gray-600 hover:text-amber-600'}`}
                 >
                   {cat}
                 </button>
               ))}
             </div>
           </div>
-
-          <div className="hidden lg:block">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-4 border-b pb-2">Price Range</h3>
-            <div className="space-y-3">
-              {['Under ₦25,000', '₦25k - ₦75k', 'Above ₦75,000'].map((label) => (
-                <label key={label} className="flex items-center space-x-3 cursor-pointer group">
-                  <input type="checkbox" className="form-checkbox text-amber-600 rounded border-gray-300 w-4 h-4" />
-                  <span className="text-xs text-gray-600 group-hover:text-amber-600">{label}</span>
-                </label>
-              ))}
-            </div>
-          </div>
         </aside>
 
-        {/* Product Grid - Optimized for Mobile (3), Tablet (4), Desktop (5) */}
+        {/* Product Grid - Optimized for Mobile (2), Tablet (3), Desktop (4/5) */}
         <div className="flex-1">
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-2 gap-y-4 md:gap-x-4 md:gap-y-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-8">
               {filteredProducts.map(product => (
                 <ProductGridItem key={product.id} product={product} />
               ))}

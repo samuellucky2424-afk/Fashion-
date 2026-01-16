@@ -8,14 +8,42 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --font-main: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        html {
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+            html { font-size: 14px; }
+        }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-main);
+            line-height: 1.5;
+            overflow-x: hidden;
         }
         h1, h2, h3, .font-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-serif);
         }
-        .luxury-gradient {
-            background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+        .responsive-container {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 768px) {
+            .responsive-container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
