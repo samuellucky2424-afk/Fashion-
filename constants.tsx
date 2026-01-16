@@ -1,0 +1,167 @@
+
+import { Product, BusinessHours } from './types';
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'Classic Black Tuxedo - Premium Wool Blend Collection',
+    description: 'A premium wool-blend tuxedo designed for the modern gentleman. Perfect for galas and black-tie events.',
+    price: 125000,
+    originalPrice: 150000,
+    category: 'Men',
+    images: ['https://picsum.photos/seed/tux1/800/1000', 'https://picsum.photos/seed/tux2/800/1000'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['Black'],
+    stock: 15,
+    rating: 4.8,
+    isFeatured: true,
+    isNewArrival: false,
+    reviews: []
+  },
+  {
+    id: '2',
+    name: 'Silk Evening Gown with Delicate Embroidery',
+    description: 'An elegant floor-length silk gown with delicate embroidery. Available in royal blue and emerald green.',
+    price: 85000,
+    originalPrice: 110000,
+    category: 'Women',
+    images: ['https://picsum.photos/seed/gown1/800/1000', 'https://picsum.photos/seed/gown2/800/1000'],
+    sizes: ['XS', 'S', 'M', 'L'],
+    colors: ['Royal Blue', 'Emerald Green'],
+    stock: 8,
+    rating: 4.9,
+    isFeatured: true,
+    isNewArrival: true,
+    reviews: []
+  },
+  {
+    id: '3',
+    name: 'Executive Chronograph Watch - Silver Edition',
+    description: 'Stainless steel timepiece with sapphire crystal glass and leather strap.',
+    price: 45000,
+    category: 'Watches',
+    images: ['https://picsum.photos/seed/watch1/800/1000'],
+    sizes: ['One Size'],
+    colors: ['Silver', 'Gold'],
+    stock: 20,
+    rating: 4.7,
+    isFeatured: false,
+    isNewArrival: true,
+    reviews: []
+  },
+  {
+    id: '4',
+    name: 'Linen Summer Set (Shirt & Trousers)',
+    description: 'Breathable linen shirt and trousers set for casual luxury.',
+    price: 35000,
+    originalPrice: 42000,
+    category: 'Sets',
+    images: ['https://picsum.photos/seed/set1/800/1000'],
+    sizes: ['M', 'L', 'XL'],
+    colors: ['Beige', 'White'],
+    stock: 12,
+    rating: 4.5,
+    isFeatured: false,
+    isNewArrival: true,
+    reviews: []
+  },
+  {
+    id: '5',
+    name: 'Genuine Leather Handbag with Gold-Plated Hardware',
+    description: 'Genuine leather handbag with gold-plated hardware.',
+    price: 55000,
+    originalPrice: 70000,
+    category: 'Accessories',
+    images: ['https://picsum.photos/seed/bag1/800/1000'],
+    sizes: ['Medium'],
+    colors: ['Brown', 'Black'],
+    stock: 10,
+    rating: 4.6,
+    isFeatured: true,
+    isNewArrival: false,
+    reviews: []
+  },
+  {
+    id: '6',
+    name: 'Men\'s Designer Slim Fit Suit',
+    description: 'A sharp, slim-fit designer suit for everyday professional wear.',
+    price: 65000,
+    category: 'Men',
+    images: ['https://picsum.photos/seed/suit6/800/1000'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Navy Blue', 'Grey'],
+    stock: 5,
+    rating: 4.4,
+    reviews: []
+  },
+  {
+    id: '7',
+    name: 'Summer Floral Maxi Dress',
+    description: 'Lightweight floral dress perfect for summer events.',
+    price: 25000,
+    originalPrice: 35000,
+    category: 'Women',
+    images: ['https://picsum.photos/seed/dress7/800/1000'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Floral Red'],
+    stock: 12,
+    rating: 4.2,
+    reviews: []
+  },
+  {
+    id: '8',
+    name: 'Limited Edition Gold Watch',
+    description: 'A luxury timepiece plated in 18k gold.',
+    price: 180000,
+    category: 'Watches',
+    images: ['https://picsum.photos/seed/watch8/800/1000'],
+    sizes: ['One Size'],
+    colors: ['Gold'],
+    stock: 3,
+    rating: 5.0,
+    reviews: []
+  },
+  {
+    id: '9',
+    name: 'Casual Weekend Polo Shirt',
+    description: 'Cotton-rich polo shirt for relaxed style.',
+    price: 12000,
+    originalPrice: 18000,
+    category: 'Men',
+    images: ['https://picsum.photos/seed/polo9/800/1000'],
+    sizes: ['M', 'L', 'XL'],
+    colors: ['White', 'Black', 'Blue'],
+    stock: 45,
+    rating: 4.5,
+    reviews: []
+  },
+  {
+    id: '10',
+    name: 'High-Waist Palazzo Trousers',
+    description: 'Fashionable wide-leg trousers for an elegant silhouette.',
+    price: 18500,
+    category: 'Women',
+    images: ['https://picsum.photos/seed/trou10/800/1000'],
+    sizes: ['S', 'M'],
+    colors: ['Black', 'Beige'],
+    stock: 18,
+    rating: 4.6,
+    reviews: []
+  }
+];
+
+export const INITIAL_BUSINESS_HOURS: BusinessHours[] = [
+  { day: 'Monday', open: '09:00', close: '18:00' },
+  { day: 'Tuesday', open: '09:00', close: '18:00' },
+  { day: 'Wednesday', open: '09:00', close: '18:00' },
+  { day: 'Thursday', open: '09:00', close: '18:00' },
+  { day: 'Friday', open: '09:00', close: '18:00' },
+  { day: 'Saturday', open: '10:00', close: '16:00' },
+  { day: 'Sunday', open: 'Closed', close: 'Closed' },
+];
+
+export const NGN_FORMAT = new Intl.NumberFormat('en-NG', {
+  style: 'currency',
+  currency: 'NGN',
+  minimumFractionDigits: 0,
+});
