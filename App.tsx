@@ -9,7 +9,6 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Admin from './pages/Admin';
-import About from './pages/About';
 import Contact from './pages/Contact';
 
 // Scroll to top helper
@@ -36,7 +35,6 @@ const App: React.FC = () => {
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/admin" element={<Admin />} />
-              <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/wishlist" element={<Shop />} /> {/* Reusing shop for now */}
               <Route path="/account" element={<Admin />} /> {/* Simple re-direct to admin/user area */}

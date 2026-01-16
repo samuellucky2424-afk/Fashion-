@@ -12,7 +12,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Shop', path: '/shop' },
-    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
     ...(user?.role === 'admin' ? [{ name: 'Admin', path: '/admin' }] : []),
   ];
